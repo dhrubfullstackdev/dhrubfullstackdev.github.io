@@ -8,7 +8,7 @@
 
     /*========== Colors ==========*/
     /* Change favorite color */
-    --hue-color: 250; /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
+    --hue-color:250; /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
 
     /* HSL color mode */
     --first-color:hsl(var(--hue-color),69%,61%);
@@ -1163,5 +1163,8 @@ color:#FFF;
        .contact__inputs{
         grid-template-columns: repeat(2,1fr);
        }
-
+}
+.dark-mode {
+    background-color: #2c3e50;
+    color: #ecf0f1;
 }

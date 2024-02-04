@@ -202,34 +202,37 @@ window.addEventListener('scroll',scrollHeader)
 // window.addEventListener('scroll', scrollUp);
 
 /*==================== DARK LIGHT THEME ====================*/ 
-const themeButton=document.getElementById('theme-button')
-const iconTheme='uil-sun'
-const darkTheme='dark-theme'
+function ChangeThemecolor(){
+    const themeButton = document.getElementById('theme-button')
+    const iconTheme = 'uil-sun'
+    const darkTheme = 'dark-theme'
 
-// Previously seleceted topic(if user selected)
-const selectedTheme=localStorage.getItem('selected-theme')
-const selectedIcon=localStorage.getItem('selected-icon')
+    // Previously seleceted topic(if user selected)
+    const selectedTheme = localStorage.getItem('selected-theme')
+    const selectedIcon = localStorage.getItem('selected-icon')
 
-// We obtain the current theme that the interface has by validating the dark-theme class
-const getCurrentTheme=()=>document.body.classList.contains(darkTheme)?'dark':'light'
-const getCurrentIcon=()=>themeButton.classList.contains(iconTheme)? 'uil-moon':'uil-sun'
+    // We obtain the current theme that the interface has by validating the dark-theme class
+    const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
+    const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'uil-moon' : 'uil-sun'
 
-//We validate if the user previously chose a topic
-if(selectedTheme){
-    //If the validation is fulfilled, we ask what the isssue was to know if we activated or deactivated the dark theme
-    documnet.body.classList[selectedTheme=== 'dark'? 'add':'remove'](darkTheme)
-    themeButton.classList[selectedIcon=== 'uil-moon' ? 'add':'remove'](iconTheme)
-}
+    //We validate if the user previously chose a topic
+    if (selectedTheme) {
+        //If the validation is fulfilled, we ask what the isssue was to know if we activated or deactivated the dark theme
+        document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
+        themeButton.classList[selectedIcon === 'uil-moon' ? 'add' : 'remove'](iconTheme)
+    }
 
-//Activate / deactivate the theme manually with the button
-themeButton.addEventListener('click',()=>{
-    //Add or remove the dark/icon theme
-    document.body.classList.toggle(darkTheme)
-    themeButton.classList.toggle(iconTheme)
-    //We save the theme and the current icon that the user choose
-    localStorage.setItem('selected-theme',getCurrentTheme())
-    localStorage.setItem('selected-icon',getCurrentIcon())
-})
+    //Activate / deactivate the theme manually with the button
+    themeButton.addEventListener('click', () => {
+        //Add or remove the dark/icon theme
+        document.body.classList.toggle(darkTheme)
+        themeButton.classList.toggle(iconTheme)
+        //We save the theme and the current icon that the user choose
+        localStorage.setItem('selected-theme', getCurrentTheme())
+        localStorage.setItem('selected-icon', getCurrentIcon())
+    });
+ }
+
 /*==================== SCROLL REVEAL ANIMATION ====================*/
 const sr=ScrollReveal({
     origin:'toop',
