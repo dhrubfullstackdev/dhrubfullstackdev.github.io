@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--=========== UNICONS ===========-->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
     <!--=========== STYLE ===========-->
     <link rel="stylesheet" href="">
     <!--=========== CSS ===========-->
@@ -781,7 +781,7 @@
                     </div>
 
                 </div>
-                <form action="" class="contact__form grid">
+                <form action="" id="contact_form" class="contact__form grid">
                     <div class="contact__inputs grid">
                         <div class="contact__content">
                             <label for="" class="contact__label">Name</label>
@@ -801,8 +801,8 @@
                         <textarea name="Message" id="Message" cols="30" rows="7" class="contact__input"></textarea>
                     </div>
                     <div>
-                        <a href="" class="button button--flex">
-                            Send Message
+                        <a  class="button button--flex">
+                           <button type="submit">></button> Send Message
                             <i class="uil uil-message project__icon button__icon"></i>
                         </a>
                     </div>
@@ -854,6 +854,8 @@
     <!-- <script src="assets/js/swiper-bundle.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/email.min.js"></script>
+    <script src="assets/js/email.js"></script>
     <script>
         var swiper = new Swiper(".mySwiper", {
             spaceBetween: 30,
