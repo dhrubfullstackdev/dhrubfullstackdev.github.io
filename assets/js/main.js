@@ -39,9 +39,7 @@ const skillsContent=document.getElementsByClassName('skills__content')
    if(content==='skills__content skills__close'){
     document.getElementsByClassName('skills__content')[index-1].className='skills__content skills__open'
    }
-}
-
-    
+}  
 /*==================== QUALIFICATION TABS ====================*/
 function showqualification(index){
     var content;
