@@ -1,1 +1,1 @@
-# This is my portfolio full stack Developer!
+# This is my portfolio!
