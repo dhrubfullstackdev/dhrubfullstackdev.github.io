@@ -356,9 +356,15 @@ img {
     font-size: var(--h3-font-size);
     color: var(--text-color);
     font-weight: var(--font-medium);
-    margin-bottom: var(--mb-0-75);
+    margin-bottom: var(--mb-0-50);    
 }
-
+.home__subtitle__tech{
+    font-size: var(--h4-font-size);
+    color: var(--text-color);
+    font-weight: var(--font-medium);
+    margin-bottom: var(--mb-1-5);
+    text-decoration: underline;
+}
 .home__description {
     margin-bottom: var(--mb-2);
 }
